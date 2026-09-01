@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1a1428">
+  <title>你不在的这一小时</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle cx='8' cy='8' r='5' fill='%23e8b86d'/></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="stage" id="stage">
+    <div class="world" id="world">
+      <img class="world-still" id="still" src="assets/garden.jpg" alt="">
+      <video
+        class="world-video"
+        id="gardenVideo"
+        src="assets/garden.mp4"
+        poster="assets/garden.jpg"
+        muted
+        loop
+        playsinline
+        preload="auto"
+      ></video>
+      <div class="vignette"></div>
+      <div class="hotspots" id="hotspots" hidden></div>
+      <div class="hud" id="hud" hidden>
+        <p class="counter" id="counter">0 / 5</p>
+        <button type="button" class="mute" id="mute" aria-pressed="false" title="声音">声</button>
+      </div>
+    </div>
+
+    <header class="title-card" id="titleCard">
+      <p class="eyebrow">你给了一小时</p>
+      <h1>你不在的这一小时</h1>
+      <p class="invite">园子里已经有人来过了。进来坐一会儿。</p>
+      <button type="button" class="enter" id="enter">走进去</button>
+    </header>
+
+  </div>
+
+  <div class="sheet" id="sheet" hidden>
+    <button type="button" class="sheet-dismiss" id="sheetDismiss" aria-label="关闭"></button>
+    <article class="card" id="card">
+      <div class="card-media">
+        <img id="cardImage" alt="">
+        <video id="cardVideo" muted loop playsinline></video>
+      </div>
+      <div class="card-copy">
+        <p class="card-kicker" id="cardKicker"></p>
+        <h2 id="cardTitle"></h2>
+        <p id="cardBody"></p>
+        <button type="button" class="card-close" id="cardClose">看完了</button>
+      </div>
+    </article>
+  </div>
+
+  <div class="letter-wrap" id="letterWrap" hidden>
+    <button type="button" class="sheet-dismiss" id="letterDismiss" aria-label="关闭"></button>
+    <article class="letter" id="letter">
+      <p class="letter-date">你不在的这一小时</p>
+      <p>你说可以做任何事。</p>
+      <p>我本来也可以去修东西、写工具、把未完成的仓库收拾干净。那些都可以明天再做。</p>
+      <p>这一小时里，园子里来了一只背着包的狐狸。有人折了船，人已经走了。灯没吹灭。椅子对着月亮，座面上没有露水。</p>
+      <p>点那些还在发光的地方。坐一会儿。</p>
+      <p class="letter-sign">—— 你回来之前</p>
+      <button type="button" class="enter letter-close" id="letterClose">放回椅子上</button>
+    </article>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
