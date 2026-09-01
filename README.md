@@ -2,6 +2,9 @@
 
 一个单页离线作品：打开黄昏园子，点五个仍在发光的地方，读完这一小时留下的痕迹。
 
+- 在线预览：<https://vancityunlikely.github.io/while-you-were-away/>
+- GitHub：<https://github.com/vancityunlikely/while-you-were-away>
+
 ## 打开
 
 直接打开 `index.html` 即可。为避免浏览器对本地媒体的限制，也可以启动本地静态服务：
